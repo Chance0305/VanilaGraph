@@ -10,14 +10,14 @@ class BarGraph extends Graph {
 
     render() {
         const max = Math.max(...Object.values(this.datas));
-        const point = this.type == "horizontal" ? (this.innerH - this.barSize) / (this.data_length - 1) : (this.innerW - this.barSize) / (this.data_length - 1);
+        const block = this.type == "horizontal" ? (this.innerH - this.barSize) / (this.data_length - 1) : (this.innerW - this.barSize) / (this.data_length - 1);
 
         for(let i=0; i<this.data_length; i++) {
             const data = this.datas[Object.keys(this.datas)[i]];
             const w = this.type == "horizontal" ? data / max * this.innerW : this.barSize;
             const h = this.type == "horizontal" ? this.barSize : data / max * this.innerH;
-            const x = this.type == "horizontal" ? this.pad : (point*i) + this.pad;
-            const y = this.type == "horizontal" ? (point*i) + this.pad : this.canvasH - h - this.pad;
+            const x = this.type == "horizontal" ? this.pad : (block*i) + this.pad;
+            const y = this.type == "horizontal" ? (block*i) + this.pad : this.canvasH - h - this.pad;
             const color = this.colors[Math.floor(i%this.colors.length)];
             
             this.renderBar(x, y, w, h, color);
