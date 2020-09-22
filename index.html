@@ -11,7 +11,7 @@
 
         <canvas id="hortBar" style="border: 1px solid #dfdfdf;"></canvas>
         <canvas id="vertBar" style="border: 1px solid #dfdfdf;"></canvas>
-        <canvas id="circle" style="border: 1px solid #dfdfdf;"></canvas>
+        <canvas id="pie" style="border: 1px solid #dfdfdf;"></canvas>
         <canvas style="border: 1px solid #dfdfdf;"></canvas>
 
     </div>
@@ -31,14 +31,14 @@
             'g': Math.floor( Math.random()*50 ),
             'h': Math.floor( Math.random()*50 ),
             'i': Math.floor( Math.random()*50 ),
-            'j': Math.floor( Math.random()*50 ),
-            'k': Math.floor( Math.random()*50 ),
-            'l': Math.floor( Math.random()*50 ),
+            // 'j': Math.floor( Math.random()*50 ),
+            // 'k': Math.floor( Math.random()*50 ),
+            // 'l': Math.floor( Math.random()*50 ),
         }
 
         new BarGraph("canvas#hortBar", datas);
         new BarGraph("canvas#vertBar", datas, "vertical");
-        new CircleGraph("canvas#pie", datas);
+        new PieGraph("canvas#pie", datas);
     </script>
 </body>
 </html>
