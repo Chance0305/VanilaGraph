@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container" style="display: flex; flex-direction: column; align-items: flex-start;">
+
+        <canvas id="hortBar" style="border: 1px solid #dfdfdf;"></canvas>
+        <canvas id="vertBar" style="border: 1px solid #dfdfdf;"></canvas>
+        <canvas style="border: 1px solid #dfdfdf;"></canvas>
+        <canvas style="border: 1px solid #dfdfdf;"></canvas>
+
+    </div>
+
+    <script src="resources/js/Graph.js"></script>
+    <script src="resources/js/BarGraph.js"></script>
+    <script>
+        const log = console.log;
+        const datas = {
+            'a': Math.floor( Math.random()*50 ),
+            'b': Math.floor( Math.random()*50 ),
+            'c': Math.floor( Math.random()*50 ),
+            'd': Math.floor( Math.random()*50 ),
+            'e': Math.floor( Math.random()*50 ),
+            'f': Math.floor( Math.random()*50 ),
+            'g': Math.floor( Math.random()*50 ),
+            'h': Math.floor( Math.random()*50 ),
+            'i': Math.floor( Math.random()*50 ),
+            'j': Math.floor( Math.random()*50 ),
+            'k': Math.floor( Math.random()*50 ),
+            'l': Math.floor( Math.random()*50 ),
+        }
+
+        new BarGraph("canvas#hortBar", datas);
+        new BarGraph("canvas#vertBar", datas, "vertical");
+    </script>
+</body>
+</html>
