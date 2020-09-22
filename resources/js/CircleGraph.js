@@ -1,9 +1,13 @@
-class CircleGraph {
+class PieGraph extends Graph {
     constructor(selector, datas) {
         super(selector, datas);
 
         this.radius = Math.min(this.innerW, this.innerH);
 
-        log( this.radius );
+        this.render();
+    }
+
+    render() {
+        
     }
 }

@@ -11,13 +11,14 @@
 
         <canvas id="hortBar" style="border: 1px solid #dfdfdf;"></canvas>
         <canvas id="vertBar" style="border: 1px solid #dfdfdf;"></canvas>
-        <canvas style="border: 1px solid #dfdfdf;"></canvas>
+        <canvas id="circle" style="border: 1px solid #dfdfdf;"></canvas>
         <canvas style="border: 1px solid #dfdfdf;"></canvas>
 
     </div>
 
     <script src="resources/js/Graph.js"></script>
     <script src="resources/js/BarGraph.js"></script>
+    <script src="resources/js/PieGraph.js"></script>
     <script>
         const log = console.log;
         const datas = {
@@ -37,6 +38,7 @@
 
         new BarGraph("canvas#hortBar", datas);
         new BarGraph("canvas#vertBar", datas, "vertical");
+        new CircleGraph("canvas#pie", datas);
     </script>
 </body>
 </html>
