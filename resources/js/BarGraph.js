@@ -12,7 +12,7 @@ class BarGraph extends Graph {
         const max = Math.max(...Object.values(this.datas));
         const block = this.type == "horizontal" ? (this.innerH - this.barSize) / (this.data_length - 1) : (this.innerW - this.barSize) / (this.data_length - 1);
 
-        for(let i=0; i<this.data_length; i++) {
+        for( let i=0; i<this.data_length; i++ ) {
             const data = this.datas[Object.keys(this.datas)[i]];
             const w = this.type == "horizontal" ? data / max * this.innerW : this.barSize;
             const h = this.type == "horizontal" ? this.barSize : data / max * this.innerH;

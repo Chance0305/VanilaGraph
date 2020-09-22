@@ -13,7 +13,7 @@
         <canvas id="vertBar" style="border: 1px solid #dfdfdf;"></canvas>
         <canvas id="pie" style="border: 1px solid #dfdfdf;"></canvas>
         <canvas id="pie_select" style="border: 1px solid #dfdfdf;"></canvas>
-
+        <canvas id="line" style="border: 1px solid #dfdfdf;"></canvas>
     </div>
 
     <script src="resources/js/Graph.js"></script>
@@ -27,6 +27,7 @@
         new BarGraph( "canvas#vertBar", getDUMP(10), "vertical" );
         new PieGraph( "canvas#pie", getDUMP(10) );
         new PieGraph( "canvas#pie_select", getDUMP(8), "0003" );
+        new LineGraph( "canvas#line", getDUMP(8) );
 
 
         // create key&value dump data
